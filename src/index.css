@@ -1,0 +1,133 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Montserrat:wght@200;300;400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 240 22% 5%;
+    --foreground: 40 25% 94%;
+    --card: 240 22% 8%;
+    --card-foreground: 40 25% 94%;
+    --popover: 240 22% 5%;
+    --popover-foreground: 40 25% 94%;
+    --primary: 43 80% 56%;
+    --primary-foreground: 240 22% 5%;
+    --secondary: 240 22% 12%;
+    --secondary-foreground: 40 25% 94%;
+    --muted: 240 22% 11%;
+    --muted-foreground: 240 10% 58%;
+    --accent: 345 45% 58%;
+    --accent-foreground: 40 25% 94%;
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 43 74% 52% / 0.15;
+    --input: 43 74% 52% / 0.2;
+    --ring: 43 80% 56%;
+    --chart-1: 43 74% 52%;
+    --chart-2: 350 30% 59%;
+    --chart-3: 0 0% 96%;
+    --chart-4: 0 0% 40%;
+    --chart-5: 43 74% 30%;
+    --radius: 0.75rem;
+    --sidebar-background: 0 0% 6%;
+    --sidebar-foreground: 0 0% 96%;
+    --sidebar-primary: 43 74% 52%;
+    --sidebar-primary-foreground: 0 0% 6%;
+    --sidebar-accent: 0 0% 12%;
+    --sidebar-accent-foreground: 0 0% 96%;
+    --sidebar-border: 43 74% 52% / 0.15;
+    --sidebar-ring: 43 74% 52%;
+
+    --font-serif: 'Cormorant Garamond', Georgia, serif;
+    --font-sans: 'Montserrat', system-ui, sans-serif;
+  }
+
+  .dark {
+    --background: 240 22% 5%;
+    --foreground: 40 25% 94%;
+    --card: 240 22% 8%;
+    --card-foreground: 40 25% 94%;
+    --popover: 240 22% 5%;
+    --popover-foreground: 40 25% 94%;
+    --primary: 43 80% 56%;
+    --primary-foreground: 240 22% 5%;
+    --secondary: 240 22% 12%;
+    --secondary-foreground: 40 25% 94%;
+    --muted: 240 22% 11%;
+    --muted-foreground: 240 10% 58%;
+    --accent: 345 45% 58%;
+    --accent-foreground: 40 25% 94%;
+    --ring: 43 80% 56%;
+    --chart-1: 43 74% 52%;
+    --chart-2: 350 30% 59%;
+    --chart-3: 0 0% 96%;
+    --chart-4: 0 0% 40%;
+    --chart-5: 43 74% 30%;
+    --sidebar-background: 0 0% 6%;
+    --sidebar-foreground: 0 0% 96%;
+    --sidebar-primary: 43 74% 52%;
+    --sidebar-primary-foreground: 0 0% 6%;
+    --sidebar-accent: 0 0% 12%;
+    --sidebar-accent-foreground: 0 0% 96%;
+    --sidebar-border: 43 74% 52% / 0.15;
+    --sidebar-ring: 43 74% 52%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    font-family: var(--font-sans);
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 4px;
+}
+
+::-webkit-scrollbar-track {
+  background: #0F0F0F;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #D4AF37;
+  border-radius: 2px;
+}
+
+/* Scratch canvas cursor */
+.scratch-cursor {
+  cursor: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24'%3E%3Ccircle cx='12' cy='12' r='10' fill='none' stroke='%23D4AF37' stroke-width='2'/%3E%3C/svg%3E") 12 12, crosshair;
+}
+
+/* Glow effect */
+.gold-glow {
+  text-shadow: 0 0 20px rgba(212, 175, 55, 0.3), 0 0 40px rgba(212, 175, 55, 0.1);
+}
+
+.gold-box-glow {
+  box-shadow: 0 0 30px rgba(212, 175, 55, 0.15), 0 0 60px rgba(212, 175, 55, 0.05);
+}
+
+
+.rotate90 {
+  rotate: 90deg;
+}
+
+.rotate180 {
+  rotate: 180deg;
+}
+
+.rotate270 {
+  rotate: 270deg;
+}

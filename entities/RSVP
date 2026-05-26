@@ -1,0 +1,31 @@
+{
+  "name": "RSVP",
+  "type": "object",
+  "properties": {
+    "name": {
+      "type": "string",
+      "description": "Guest name"
+    },
+    "guests": {
+      "type": "number",
+      "description": "Number of guests attending"
+    },
+    "attending": {
+      "type": "string",
+      "enum": [
+        "yes",
+        "no",
+        "maybe"
+      ],
+      "description": "Attendance confirmation"
+    },
+    "message": {
+      "type": "string",
+      "description": "Message for the couple"
+    }
+  },
+  "required": [
+    "name",
+    "attending"
+  ]
+}
